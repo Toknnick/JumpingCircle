@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     private int _hp;
     private LevelManger levelManger;
 
-    public void GetDamge(int amount)
+    public void GetDamage(int amount)
     {
         _hp -= amount;
 

@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out Turret _) == false)
         {
             if (collision.gameObject.TryGetComponent(out Player player))
-                player.GetDamge(_damage);
+                player.GetDamage(_damage);
 
             gameObject.SetActive(false);
         }

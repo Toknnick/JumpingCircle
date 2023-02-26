@@ -15,7 +15,7 @@ public class LevelManger : MonoBehaviour
     public float MinForce => minForce;
     [SerializeField] private float maxForce = 700f;
     public float MaxForce => maxForce;
-    [SerializeField] private float timeForMaxForce = 1.8f;
+    [SerializeField] private float timeForMaxForce = 1;
     public float TimeForMaxForce => timeForMaxForce;
     #endregion
     #endregion
@@ -33,6 +33,14 @@ public class LevelManger : MonoBehaviour
     public int TurretDamage => _turretDamage;
     [SerializeField] private int _bulletSpeed = 10;
     public int BulletSpeed => _bulletSpeed;
+    #endregion
+    #region Patroller
+    [Header("Патруль")]
+    [SerializeField] private float _maxSpeed = 10;
+    public float MaxSpeed => _maxSpeed;
+    [SerializeField] private int _damage = 1;
+    public int Damage => _damage;
+
     #endregion
     #endregion
 
