@@ -42,6 +42,6 @@ public class LevelManger : MonoBehaviour
 
     public void GameOver()
     {
-
+        Debug.Log("Game over");
     }
 }
