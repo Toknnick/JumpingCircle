@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private int _maxHP;
     private int _hp;
     private LevelManger levelManger;
 
@@ -15,9 +16,16 @@ public class Player : MonoBehaviour
             levelManger.GameOver();
     }
 
+    public void GetHeal(int amount)
+    {
+        if(_hp + amount <= _maxHP)
+        _hp += amount;
+    }
+
     private void Start()
     {
         levelManger = LevelManger.levelManager;
-        _hp = levelManger.PlayerHP;
+        _maxHP = levelManger.PlayerHP;
+        _hp = _maxHP;
     }
 }

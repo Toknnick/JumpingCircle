@@ -2058,7 +2058,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2197,6 +2197,8 @@ MonoBehaviour:
   _cd: 2
   _turretDamage: 1
   _bulletSpeed: 10
+  _maxSpeed: 10
+  _damage: 1
 --- !u!4 &1916392240
 Transform:
   m_ObjectHideFlags: 0
