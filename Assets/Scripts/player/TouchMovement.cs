@@ -15,6 +15,11 @@ public class TouchMovement : MonoBehaviour
     private bool isSticked = false;
     private bool isLuanched = false;
 
+    public void ChangeMaxForce(float value)
+    {
+        maxForce *= value;
+    }
+
     private void Start()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
@@ -53,6 +58,15 @@ public class TouchMovement : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Effector"))
+        {
+            isLuanched = false;
+            isSticked = true;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!isSticked)
@@ -60,7 +74,7 @@ public class TouchMovement : MonoBehaviour
             isLuanched = false;
             isSticked = true;
             rigidBody2D.velocity = Vector3.zero;
-            rigidBody2D.angularVelocity =0;
+            rigidBody2D.angularVelocity = 0;
             rigidBody2D.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }

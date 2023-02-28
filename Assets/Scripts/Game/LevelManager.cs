@@ -49,6 +49,13 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private int _damageOfBomb = 1;
     public int DamageOfBomb => _damageOfBomb;
     #endregion
+    #region Lava
+    [Header("Ыртр")]
+    [SerializeField] private int _lavaDamage = 1;
+    public int LavaDamage => _lavaDamage;
+    [SerializeField] private float _timeForLavaForDealDamage = 4;
+    public float TimeForLavaForDealDamage => _timeForLavaForDealDamage;
+    #endregion
     #endregion
 
     private void Awake()
@@ -57,10 +64,7 @@ public class LevelManager : MonoBehaviour
             levelManager = this;
         else
             Destroy(gameObject);
-    }
 
-    private void Start()
-    {
         _player = Instantiate(_player);
         _camera = Instantiate(_camera.gameObject).GetComponent<MovingCamera>();
         _player.transform.position = new Vector2(0, 0);
