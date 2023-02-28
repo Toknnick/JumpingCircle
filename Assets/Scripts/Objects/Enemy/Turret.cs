@@ -7,7 +7,7 @@ public class Turret : MonoBehaviour
     private int _damage;
     private int _cd;
     private float _speed;
-    private LevelManger levelManager;
+    private LevelManager levelManager;
     private bool _isCanShoot = false;
     private Vector2 _moveDirection;
     private Transform _player;
@@ -15,7 +15,7 @@ public class Turret : MonoBehaviour
 
     private void Start()
     {
-        levelManager = LevelManger.levelManager;
+        levelManager = LevelManager.levelManager;
         _bullet = Instantiate(_bullet);
         _bulletScript = _bullet.GetComponent<Bullet>();
         _bullet.gameObject.SetActive(false);

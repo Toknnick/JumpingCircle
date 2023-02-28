@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     private int _maxHP;
     private int _hp;
-    private LevelManger levelManger;
+    private LevelManager levelManger;
 
     public void GetDamage(int amount)
     {
@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        levelManger = LevelManger.levelManager;
+        levelManger = LevelManager.levelManager;
         _maxHP = levelManger.PlayerHP;
         _hp = _maxHP;
     }

@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class LevelManger : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
-    public static LevelManger levelManager;
+    public static LevelManager levelManager;
     #region Player
     [Header("Игрок")]
     [SerializeField] private Transform _player;
@@ -11,7 +11,7 @@ public class LevelManger : MonoBehaviour
     [SerializeField] private int _playerHP = 2;
     public int PlayerHP => _playerHP;
     #region Move
-    [SerializeField] private float minForce = 10f;
+    [SerializeField] private float minForce = 100f;
     public float MinForce => minForce;
     [SerializeField] private float maxForce = 700f;
     public float MaxForce => maxForce;
@@ -42,6 +42,13 @@ public class LevelManger : MonoBehaviour
     public int Damage => _damage;
 
     #endregion
+    #region Bomb
+    [Header("Бомба")]
+    [SerializeField] private float _timeForBum = 1;
+    public float TimeForBum => _timeForBum;
+    [SerializeField] private int _damageOfBomb = 1;
+    public int DamageOfBomb => _damageOfBomb;
+    #endregion
     #endregion
 
     private void Awake()
@@ -55,6 +62,7 @@ public class LevelManger : MonoBehaviour
     private void Start()
     {
         _player = Instantiate(_player);
+        _camera = Instantiate(_camera.gameObject).GetComponent<MovingCamera>();
         _player.transform.position = new Vector2(0, 0);
         _camera.SetTartget(_player);
     }

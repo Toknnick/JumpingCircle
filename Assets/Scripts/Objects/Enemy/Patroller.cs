@@ -5,7 +5,7 @@ public class Patroller : MonoBehaviour
 {
     [SerializeField] private List<Transform> _points;
 
-    private LevelManger levelManager;
+    private LevelManager levelManager;
     private float _maxSpeed;
     private float _nowSpeed = 3;
     private int _damage;
@@ -17,7 +17,7 @@ public class Patroller : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        levelManager = LevelManger.levelManager;
+        levelManager = LevelManager.levelManager;
         _maxSpeed = levelManager.MaxSpeed;
         _damage = levelManager.Damage;
     }

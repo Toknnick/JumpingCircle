@@ -3,11 +3,11 @@ using UnityEngine;
 public class Spike : MonoBehaviour
 {
     private int _damage;
-    private LevelManger levelManger;
+    private LevelManager levelManger;
 
     private void Start()
     {
-        levelManger = LevelManger.levelManager;
+        levelManger = LevelManager.levelManager;
         _damage = levelManger.SpikeDamage;
     }
 

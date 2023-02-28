@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TouchMovement : MonoBehaviour
 {
-    private LevelManger levelManager;
+    private LevelManager levelManager;
     private float minForce;
     private float maxForce;
     private float timeForMaxForce;
@@ -18,7 +18,7 @@ public class TouchMovement : MonoBehaviour
     private void Start()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
-        levelManager = LevelManger.levelManager;
+        levelManager = LevelManager.levelManager;
         minForce = levelManager.MinForce;
         maxForce = levelManager.MaxForce;
         timeForMaxForce = levelManager.TimeForMaxForce;
