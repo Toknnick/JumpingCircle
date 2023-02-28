@@ -19,7 +19,7 @@ public class Turret : MonoBehaviour
         _bullet = Instantiate(_bullet);
         _bulletScript = _bullet.GetComponent<Bullet>();
         _bullet.gameObject.SetActive(false);
-        _damage = levelManager.TurretDamage;
+        _damage = levelManager.BulletDamage;
         _speed = levelManager.BulletSpeed;
         _cd = levelManager.CD;
         _bulletScript = _bullet.GetComponent<Bullet>();

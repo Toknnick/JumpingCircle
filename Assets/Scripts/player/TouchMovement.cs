@@ -14,6 +14,7 @@ public class TouchMovement : MonoBehaviour
     private Vector2 direction;
     private bool isSticked = false;
     private bool isLuanched = false;
+    private bool isInWater = false;
 
     public void ChangeMaxForce(float value)
     {
@@ -50,6 +51,12 @@ public class TouchMovement : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0) && !isLuanched && isSticked)
         {
+            if (isInWater)
+            {
+                rigidBody2D.velocity = Vector3.zero;
+                rigidBody2D.angularVelocity = 0;
+            }
+
             isSticked = false;
             isLuanched = true;
             elapsedTime = 0;
@@ -64,7 +71,14 @@ public class TouchMovement : MonoBehaviour
         {
             isLuanched = false;
             isSticked = true;
+            isInWater = true;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Effector"))
+            isInWater = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

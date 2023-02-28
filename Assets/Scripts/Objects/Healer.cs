@@ -10,8 +10,11 @@ public class Healer : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Player player))
         {
-            player.GetHeal(_amountOfHeal);
-            gameObject.SetActive(false);
+            if (player.IsHasMaxHp == false)
+            {
+                player.GetHeal(_amountOfHeal);
+                gameObject.SetActive(false);
+            }
         }
     }
 }

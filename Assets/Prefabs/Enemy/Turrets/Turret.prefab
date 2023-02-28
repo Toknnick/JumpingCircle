@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7543190492689904421}
   m_Layer: 0
   m_Name: Triangle
-  m_TagString: Untagged
+  m_TagString: Shooting station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 7543190494052931429}
   m_Layer: 0
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Shooting station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

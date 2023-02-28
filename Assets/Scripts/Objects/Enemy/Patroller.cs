@@ -19,7 +19,7 @@ public class Patroller : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         levelManager = LevelManager.levelManager;
         _maxSpeed = levelManager.MaxSpeed;
-        _damage = levelManager.Damage;
+        _damage = levelManager.PatrollDamage;
     }
 
     private void Update()

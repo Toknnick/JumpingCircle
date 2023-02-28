@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out Turret _) == false)
+        if (collision.CompareTag("Shooting station") == false)
         {
             if (collision.gameObject.TryGetComponent(out Player player))
                 player.GetDamage(_damage);

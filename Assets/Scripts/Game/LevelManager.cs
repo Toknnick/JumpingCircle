@@ -29,8 +29,11 @@ public class LevelManager : MonoBehaviour
     [Header("Турель")]
     [SerializeField] private int _cd = 2;
     public int CD => _cd;
-    [SerializeField] private int _turretDamage = 1;
-    public int TurretDamage => _turretDamage;
+    #endregion
+    #region Bullet
+    [Header("Пуля")]
+    [SerializeField] private int _bulletDamage = 1;
+    public int BulletDamage => _bulletDamage;
     [SerializeField] private int _bulletSpeed = 10;
     public int BulletSpeed => _bulletSpeed;
     #endregion
@@ -38,8 +41,8 @@ public class LevelManager : MonoBehaviour
     [Header("Патруль")]
     [SerializeField] private float _maxSpeed = 10;
     public float MaxSpeed => _maxSpeed;
-    [SerializeField] private int _damage = 1;
-    public int Damage => _damage;
+    [SerializeField] private int _patrollDamage = 1;
+    public int PatrollDamage => _patrollDamage;
 
     #endregion
     #region Bomb
@@ -55,6 +58,11 @@ public class LevelManager : MonoBehaviour
     public int LavaDamage => _lavaDamage;
     [SerializeField] private float _timeForLavaForDealDamage = 4;
     public float TimeForLavaForDealDamage => _timeForLavaForDealDamage;
+    #endregion
+    #region MashineGun
+    [Header("Пулемет")]
+    [SerializeField] private float _mashineGuntimeBetweenShoot = 0.6f;
+    public float MashineGuntimeBetweenShoot => _mashineGuntimeBetweenShoot;
     #endregion
     #endregion
 

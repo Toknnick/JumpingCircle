@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Effector
+  - Shooting station
   layers:
   - Default
   - TransparentFX
