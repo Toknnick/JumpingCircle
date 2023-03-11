@@ -64,6 +64,11 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float _mashineGuntimeBetweenShoot = 0.6f;
     public float MashineGuntimeBetweenShoot => _mashineGuntimeBetweenShoot;
     #endregion
+    #region Mace
+    [Header("Булава")]
+    [SerializeField] private int _maceDamage = 1;
+    public int MaceDamage => _maceDamage;
+    #endregion
     #endregion
 
     private void Awake()

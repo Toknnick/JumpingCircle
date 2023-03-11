@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Effector
   - Shooting station
+  - CantStick
   layers:
   - Default
   - TransparentFX

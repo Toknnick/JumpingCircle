@@ -83,13 +83,14 @@ public class TouchMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!isSticked)
-        {
-            isLuanched = false;
-            isSticked = true;
-            rigidBody2D.velocity = Vector3.zero;
-            rigidBody2D.angularVelocity = 0;
-            rigidBody2D.constraints = RigidbodyConstraints2D.FreezeAll;
-        }
+        if (!collision.gameObject.CompareTag("CantStick"))
+            if (!isSticked)
+            {
+                isLuanched = false;
+                isSticked = true;
+                rigidBody2D.velocity = Vector3.zero;
+                rigidBody2D.angularVelocity = 0;
+                rigidBody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
     }
 }
